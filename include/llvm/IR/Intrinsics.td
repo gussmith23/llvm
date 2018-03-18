@@ -829,6 +829,9 @@ def int_convert_from_fp16 : Intrinsic<[llvm_anyfloat_ty], [llvm_i16_ty]>;
 def int_clear_cache : Intrinsic<[], [llvm_ptr_ty, llvm_ptr_ty],
                                 [], "llvm.clear_cache">;
 
+// Gus's cache intrinsics
+def int_cache_op : Intrinsic<[]>;
+
 //===-------------------------- Masked Intrinsics -------------------------===//
 //
 def int_masked_store : Intrinsic<[], [llvm_anyvector_ty,
