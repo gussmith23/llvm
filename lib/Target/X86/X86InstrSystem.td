@@ -279,12 +279,12 @@ def PUSHDS16 : I<0x1E, RawFrm, (outs), (ins),
 def PUSHDS32 : I<0x1E, RawFrm, (outs), (ins),
                  "push{l}\t{%ds|ds}", [], IIC_PUSH_SR>,
                  OpSize32, Requires<[Not64BitMode]>;
-def PUSHES16 : I<0x06, RawFrm, (outs), (ins),
+/*def PUSHES16 : I<0x06, RawFrm, (outs), (ins),
                  "push{w}\t{%es|es}", [], IIC_PUSH_SR>,
                  OpSize16, Requires<[Not64BitMode]>;
 def PUSHES32 : I<0x06, RawFrm, (outs), (ins),
                  "push{l}\t{%es|es}", [], IIC_PUSH_SR>,
-                 OpSize32, Requires<[Not64BitMode]>;
+                 OpSize32, Requires<[Not64BitMode]>;*/
 def PUSHFS16 : I<0xa0, RawFrm, (outs), (ins),
                  "push{w}\t{%fs|fs}", [], IIC_PUSH_SR>, OpSize16, TB;
 def PUSHFS32 : I<0xa0, RawFrm, (outs), (ins),

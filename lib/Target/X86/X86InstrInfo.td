@@ -1132,6 +1132,9 @@ def trunc_su : PatFrag<(ops node:$src), (trunc node:$src), [{
 // Instruction list.
 //
 
+// Gus's cache intrinsics
+def CACHEOP : I<0x06, RawFrm, (outs), (ins), "cache_op", [(int_cache_op)]>;
+
 // Nop
 let hasSideEffects = 0, SchedRW = [WriteNop] in {
   def NOOP : I<0x90, RawFrm, (outs), (ins), "nop", [], IIC_NOP>;
